@@ -15,7 +15,8 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @Column(name = "users_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "users_id")
     private User user;
 
     public Car() {
